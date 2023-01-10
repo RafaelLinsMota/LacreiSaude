@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20230110 12:28:59.610" rpa="false" schemaversion="3">
+<suite id="s1" name="Keyword" source="C:\Users\Rafael Lins Mota\Desktop\Robot FrameWork\Testes\LacreiSaude\keyword.robot">
+<test id="s1-t1" name="Cenario Botão Criar Conta" line="9">
+<kw name="Given usuario esteja na pagian de boas vindas a lacrei saude" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230110 12:28:59.778" level="INFO">Opening browser 'chrome' to base url 'https://frontend-lacrei-pessoa-usuaria.vercel.app/login'.</msg>
+<status status="PASS" starttime="20230110 12:28:59.778" endtime="20230110 12:29:03.052"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230110 12:29:03.053" endtime="20230110 12:29:03.169"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230110 12:29:06.183" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230110 12:29:03.169" endtime="20230110 12:29:06.183"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${PAG_LOGIN}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230110 12:29:06.192" level="INFO">Current page contains text 'Boas-vindas à Lacrei Saúde'.</msg>
+<status status="PASS" starttime="20230110 12:29:06.183" endtime="20230110 12:29:06.192"/>
+</kw>
+<status status="PASS" starttime="20230110 12:28:59.777" endtime="20230110 12:29:06.192"/>
+</kw>
+<kw name="When clicar no botao criar conta" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CRIARCONTA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230110 12:29:06.193" level="INFO">Clicking element '//*[@id="__next"]/div/section/div/form/div[3]/div[2]/button'.</msg>
+<status status="PASS" starttime="20230110 12:29:06.192" endtime="20230110 12:29:06.221"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230110 12:29:09.235" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230110 12:29:06.221" endtime="20230110 12:29:09.235"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230110 12:29:09.312" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230110 12:29:09.235" endtime="20230110 12:29:09.312"/>
+</kw>
+<status status="PASS" starttime="20230110 12:29:06.192" endtime="20230110 12:29:09.312"/>
+</kw>
+<kw name="Then e encaminhado para a pagina cadastre-se" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${PAG_REGISTRO}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230110 12:29:09.320" level="INFO">Current page contains text 'Cadastre-se'.</msg>
+<status status="PASS" starttime="20230110 12:29:09.312" endtime="20230110 12:29:09.320"/>
+</kw>
+<status status="PASS" starttime="20230110 12:29:09.312" endtime="20230110 12:29:09.320"/>
+</kw>
+<status status="PASS" starttime="20230110 12:28:59.777" endtime="20230110 12:29:09.321"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230110 12:29:09.321" endtime="20230110 12:29:11.436"/>
+</kw>
+<status status="PASS" starttime="20230110 12:28:59.611" endtime="20230110 12:29:11.436"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Keyword">Keyword</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
