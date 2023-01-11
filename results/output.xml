@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20230111 12:06:09.112" rpa="false" schemaversion="3">
+<suite id="s1" name="LacreiSaude" source="C:\Users\Rafael Lins Mota\Desktop\Robot FrameWork\Testes\LacreiSaude">
+<suite id="s1-s1" name="Keyword" source="C:\Users\Rafael Lins Mota\Desktop\Robot FrameWork\Testes\LacreiSaude\keyword.robot">
+<test id="s1-s1-t1" name="Senha inválida (Letra Minuscula)" line="25">
+<kw name="Given o usuário esteja na página de Cadastra-se" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_REGISTER}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230111 12:06:09.304" level="INFO">Opening browser 'chrome' to base url 'https://frontend-lacrei-pessoa-usuaria.vercel.app/register'.</msg>
+<status status="PASS" starttime="20230111 12:06:09.303" endtime="20230111 12:06:10.719"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230111 12:06:10.719" endtime="20230111 12:06:10.892"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230111 12:06:13.897" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230111 12:06:10.892" endtime="20230111 12:06:13.897"/>
+</kw>
+<status status="PASS" starttime="20230111 12:06:09.300" endtime="20230111 12:06:13.898"/>
+</kw>
+<kw name="When não preencher a senha com o requisito Letra Minúscula" library="resource">
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PSW_2}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230111 12:06:13.906" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20230111 12:06:13.938" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230111 12:06:14.003" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230111 12:06:13.905" endtime="20230111 12:06:14.004"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230111 12:06:17.007" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230111 12:06:14.004" endtime="20230111 12:06:17.007"/>
+</kw>
+<status status="PASS" starttime="20230111 12:06:13.901" endtime="20230111 12:06:17.007"/>
+</kw>
+<kw name="Then é apresentado a mensagem de erro “Letra Minúscula”" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${LETRA_MA}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230111 12:06:17.023" level="INFO">Current page contains text 'Letra maiúscula'.</msg>
+<status status="PASS" starttime="20230111 12:06:17.014" endtime="20230111 12:06:17.023"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230111 12:06:17.114" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230111 12:06:17.023" endtime="20230111 12:06:17.115"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230111 12:06:17.115" endtime="20230111 12:06:19.222"/>
+</kw>
+<status status="PASS" starttime="20230111 12:06:17.011" endtime="20230111 12:06:19.222"/>
+</kw>
+<status status="PASS" starttime="20230111 12:06:09.299" endtime="20230111 12:06:19.225"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230111 12:06:19.226" endtime="20230111 12:06:19.226"/>
+</kw>
+<status status="PASS" starttime="20230111 12:06:09.135" endtime="20230111 12:06:19.226"/>
+</suite>
+<status status="PASS" starttime="20230111 12:06:09.117" endtime="20230111 12:06:19.228"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LacreiSaude">LacreiSaude</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Keyword">LacreiSaude.Keyword</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

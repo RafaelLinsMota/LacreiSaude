@@ -13,8 +13,10 @@ ${BT_CADASTRAR}                   //*[@id="__next"]/div/section/div/form/div[8]/
 ${CAMP_OBR}                       Campo obrigatório
 ${CARACTERE}                      8 caracteres
 ${LETRA_MA}                       Letra maiúscula
+${LETRA_MI}                       Letra minúscula
 ${PSW}                            R12raf@
 ${PSW_1}                          r12rafa@
+${PSW_2}                          R12RAFA@
 
 *** Keywords ***
 usuario esteja na pagian de boas vindas a lacrei saude
@@ -50,6 +52,13 @@ não preencher a senha com o requisito Letra Maiúscula
    Input Password            id=password              ${PSW_1}
    Sleep    3s
 é apresentado a mensagem de erro “Letra Maiúscula”
+   Page Should Contain                            ${LETRA_MA} 
+   Capture Page Screenshot
+   Close Browser
+não preencher a senha com o requisito Letra Minúscula
+   Input Password            id=password              ${PSW_2}
+   Sleep    3s
+é apresentado a mensagem de erro “Letra Minúscula”
    Page Should Contain                            ${LETRA_MA} 
    Capture Page Screenshot
    Close Browser
