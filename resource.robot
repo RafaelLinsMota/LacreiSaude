@@ -17,6 +17,8 @@ ${LETRA_MI}                       Letra minúscula
 ${PSW}                            R12raf@
 ${PSW_1}                          r12rafa@
 ${PSW_2}                          R12RAFA@
+${PSW_3}                          Rlinrafa@
+${SENHA_NUM}                      Número
 
 *** Keywords ***
 usuario esteja na pagian de boas vindas a lacrei saude
@@ -60,5 +62,12 @@ não preencher a senha com o requisito Letra Minúscula
    Sleep    3s
 é apresentado a mensagem de erro “Letra Minúscula”
    Page Should Contain                            ${LETRA_MA} 
+   Capture Page Screenshot
+   Close Browser
+não preencher a senha com o requisito Número
+   Input Password            id=password              ${PSW_3} 
+   Sleep    3s
+é apresentado a mensagem de erro “Número”
+   Page Should Contain                            ${SENHA_NUM} 
    Capture Page Screenshot
    Close Browser

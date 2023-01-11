@@ -26,3 +26,7 @@ Senha inválida (Letra Minuscula)
     Given o usuário esteja na página de Cadastra-se
     When não preencher a senha com o requisito Letra Minúscula
     Then é apresentado a mensagem de erro “Letra Minúscula”
+Senha inválida (Número)
+    Given o usuário esteja na página de Cadastra-se
+    When não preencher a senha com o requisito Número
+    Then é apresentado a mensagem de erro “Número”
