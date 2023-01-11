@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20230111 10:54:20.291" rpa="false" schemaversion="3">
+<suite id="s1" name="LacreiSaude" source="C:\Users\Rafael Lins Mota\Desktop\Robot FrameWork\Testes\LacreiSaude">
+<suite id="s1-s1" name="Keyword" source="C:\Users\Rafael Lins Mota\Desktop\Robot FrameWork\Testes\LacreiSaude\keyword.robot">
+<test id="s1-s1-t1" name="Cenario Formulário Inválido" line="13">
+<kw name="Given o usuário esteja na página de Cadastra-se" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_REGISTER}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230111 10:54:20.478" level="INFO">Opening browser 'chrome' to base url 'https://frontend-lacrei-pessoa-usuaria.vercel.app/register'.</msg>
+<status status="PASS" starttime="20230111 10:54:20.477" endtime="20230111 10:54:22.299"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230111 10:54:22.299" endtime="20230111 10:54:22.478"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230111 10:54:25.487" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230111 10:54:22.478" endtime="20230111 10:54:25.488"/>
+</kw>
+<status status="PASS" starttime="20230111 10:54:20.474" endtime="20230111 10:54:25.488"/>
+</kw>
+<kw name="When clicar no botão Cadastrar" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BT_CADASTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230111 10:54:25.499" level="INFO">Clicking element '//*[@id="__next"]/div/section/div/form/div[8]/button'.</msg>
+<status status="PASS" starttime="20230111 10:54:25.498" endtime="20230111 10:54:25.543"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230111 10:54:28.547" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230111 10:54:25.543" endtime="20230111 10:54:28.547"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230111 10:54:28.642" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230111 10:54:28.548" endtime="20230111 10:54:28.642"/>
+</kw>
+<status status="PASS" starttime="20230111 10:54:25.493" endtime="20230111 10:54:28.643"/>
+</kw>
+<kw name="Then é apresentado a mensagem de erro “Campo obrigatório”" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${CAMP_OBR}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230111 10:54:28.658" level="INFO">Current page contains text 'Campo obrigatório'.</msg>
+<status status="PASS" starttime="20230111 10:54:28.649" endtime="20230111 10:54:28.658"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230111 10:54:28.743" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230111 10:54:28.658" endtime="20230111 10:54:28.743"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230111 10:54:28.743" endtime="20230111 10:54:30.857"/>
+</kw>
+<status status="PASS" starttime="20230111 10:54:28.646" endtime="20230111 10:54:30.857"/>
+</kw>
+<status status="PASS" starttime="20230111 10:54:20.473" endtime="20230111 10:54:30.860"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230111 10:54:30.861" endtime="20230111 10:54:30.862"/>
+</kw>
+<status status="PASS" starttime="20230111 10:54:20.310" endtime="20230111 10:54:30.862"/>
+</suite>
+<status status="PASS" starttime="20230111 10:54:20.293" endtime="20230111 10:54:30.863"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LacreiSaude">LacreiSaude</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Keyword">LacreiSaude.Keyword</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
