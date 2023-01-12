@@ -22,11 +22,15 @@ Cenario Senha inválida (Letra Maiuscula)
     Given o usuário esteja na página de Cadastra-se
     When não preencher a senha com o requisito Letra Maiúscula
     Then é apresentado a mensagem de erro “Letra Maiúscula”
-Senha inválida (Letra Minuscula)
+Cenario Senha inválida (Letra Minuscula)
     Given o usuário esteja na página de Cadastra-se
     When não preencher a senha com o requisito Letra Minúscula
     Then é apresentado a mensagem de erro “Letra Minúscula”
-Senha inválida (Número)
+Cenario Senha inválida (Número)
     Given o usuário esteja na página de Cadastra-se
     When não preencher a senha com o requisito Número
     Then é apresentado a mensagem de erro “Número”
+Cenario Senha inválida (Caractere Especial)
+    Given o usuário esteja na página de Cadastra-se
+    When não preencher a senha com o requisito Caractere Especial
+    Then é apresentado a mensagem de erro “Caractere especial (ex: #!*-_&)”

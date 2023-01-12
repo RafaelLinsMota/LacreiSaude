@@ -7,18 +7,20 @@ ${BROWSER}                        chrome
 ${URL_LOGIN}                      https://frontend-lacrei-pessoa-usuaria.vercel.app/login
 ${URL_REGISTER}                   https://frontend-lacrei-pessoa-usuaria.vercel.app/register
 ${PAG_LOGIN}                      Boas-vindas à Lacrei Saúde
-${BT_CRIARCONTA}                  //*[@id="__next"]/div/section/div/form/div[3]/div[2]/button
 ${PAG_REGISTRO}                   Cadastre-se
+${BT_CRIARCONTA}                  //*[@id="__next"]/div/section/div/form/div[3]/div[2]/button
 ${BT_CADASTRAR}                   //*[@id="__next"]/div/section/div/form/div[8]/button
-${CAMP_OBR}                       Campo obrigatório
-${CARACTERE}                      8 caracteres
-${LETRA_MA}                       Letra maiúscula
-${LETRA_MI}                       Letra minúscula
 ${PSW}                            R12raf@
 ${PSW_1}                          r12rafa@
 ${PSW_2}                          R12RAFA@
 ${PSW_3}                          Rlinrafa@
+${PSW_4}                          R123rafaa
 ${SENHA_NUM}                      Número
+${SENHA_CARA_ESP}                 Caractere especial (ex: #!*-_&)
+${SENHA_CAMP_OBR}                 Campo obrigatório
+${SENHA_CARA}                     8 caracteres
+${SENHA_LETRA_MA}                 Letra maiúscula
+${SENHA_LETRA_MI}                 Letra minúscula
 
 *** Keywords ***
 usuario esteja na pagian de boas vindas a lacrei saude
@@ -40,34 +42,41 @@ clicar no botão Cadastrar
    Sleep    3s
    Capture Page Screenshot
 é apresentado a mensagem de erro “Campo obrigatório”
-   Page Should Contain                            ${CAMP_OBR} 
+   Page Should Contain                            ${SENHA_CAMP_OBR} 
    Capture Page Screenshot
    Close Browser
 não preencher a senha com o requisito mínimo 8 caracteres
    Input Password            id=password              ${PSW}
    Sleep    3s
 é apresentado a mensagem de erro "8 caracteres"
-   Page Should Contain                            ${CARACTERE} 
+   Page Should Contain                            ${SENHA_CARA} 
    Capture Page Screenshot
    Close Browser
 não preencher a senha com o requisito Letra Maiúscula
-   Input Password            id=password              ${PSW_1}
+   Input Password            id=password          ${PSW_1}
    Sleep    3s
 é apresentado a mensagem de erro “Letra Maiúscula”
-   Page Should Contain                            ${LETRA_MA} 
+   Page Should Contain                           ${SENHA_LETRA_MA} 
    Capture Page Screenshot
    Close Browser
 não preencher a senha com o requisito Letra Minúscula
-   Input Password            id=password              ${PSW_2}
+   Input Password            id=password          ${PSW_2}
    Sleep    3s
 é apresentado a mensagem de erro “Letra Minúscula”
-   Page Should Contain                            ${LETRA_MA} 
+   Page Should Contain                            ${SENHA_LETRA_MA} 
    Capture Page Screenshot
    Close Browser
 não preencher a senha com o requisito Número
-   Input Password            id=password              ${PSW_3} 
+   Input Password            id=password          ${PSW_3} 
    Sleep    3s
 é apresentado a mensagem de erro “Número”
    Page Should Contain                            ${SENHA_NUM} 
+   Capture Page Screenshot
+   Close Browser
+não preencher a senha com o requisito Caractere Especial
+   Input Password            id=password          ${PSW_4} 
+   Sleep    3s
+é apresentado a mensagem de erro “Caractere especial (ex: #!*-_&)”
+   Page Should Contain                            ${SENHA_CARA_ESP} 
    Capture Page Screenshot
    Close Browser
